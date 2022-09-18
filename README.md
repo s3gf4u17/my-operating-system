@@ -69,3 +69,7 @@ they are for color information (background,text)
 the good thing is that on a computer startup these empty bytes are already set to white text on a black background
 so we dont have to set them ourselves
 we just have to make sure that we do not override that
+we also need to tell compiler that there is nothing that handles error exceptions, no dynamic memory management etc
+no memory management flag: -fno-use-cxa-atexit
+no glib.c flag: -nostdlib
+other flags: -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
