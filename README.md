@@ -74,3 +74,4 @@ no memory management flag: -fno-use-cxa-atexit
 no glib.c flag: -nostdlib
 other flags: -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
 linker cant find kernelMain function because gpp has different naming conventions so we need to add extern "C"
+all external function pointers are stored between start and end ctors so we need to call these constructors
