@@ -55,3 +55,16 @@ before bootloader jumps into kernel it will store some information somewhere in 
 containing info like size of ram and it store the pointer to that structure in a ax register
 it also copies the magic number into the bx register
 we can use this info by pushing it with laoder, so then we need to accept it in our kernel
+so now the funny thing
+when kernel cpp is loaded we cant include libs like standard io or other usual files why is that?
+usually when u write a program u have your operating system around it and u use our program in it
+this way printf works because system sees that uu are using stuff from glib.c library
+when u start this program, system will dynamically link to load glib.c and connect your program to it
+we are outside of an os so we have no glib.c .. and we have no os at all.. we have nothing
+so we have to write printf simplified on our own
+there is a pointer in ram (0xb8000), where everything behind it is just printed on the screen by the graphics card
+| |a| |b| -> this will print out ab
+but what about this empty bytes?
+they are for color information (background,text)
+the good thing is that on a computer startup these empty bytes are already set to white text on a black background
+so we dont have to set them ourselves
