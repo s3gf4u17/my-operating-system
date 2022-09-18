@@ -73,3 +73,4 @@ we also need to tell compiler that there is nothing that handles error exception
 no memory management flag: -fno-use-cxa-atexit
 no glib.c flag: -nostdlib
 other flags: -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
+linker cant find kernelMain function because gpp has different naming conventions so we need to add extern "C"
