@@ -54,3 +54,4 @@ this magic number is a hex dec number 0x1badb002 we need some flags and a checks
 before bootloader jumps into kernel it will store some information somewhere in ram (multiboot structure)
 containing info like size of ram and it store the pointer to that structure in a ax register
 it also copies the magic number into the bx register
+we can use this info by pushing it with laoder, so then we need to accept it in our kernel
