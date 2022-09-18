@@ -33,4 +33,5 @@ mykernel.iso: mykernel.bin
 	rm -rf iso
 
 run: mykernel.iso
+	(killall virtualboxvm && sleep 1) || true
 	virtualboxvm --startvm myOS &
