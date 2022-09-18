@@ -33,4 +33,4 @@ mykernel.iso: mykernel.bin
 	rm -rf iso
 
 run: mykernel.iso
-	virtualbox --startvm myOS &
+	virtualboxvm --startvm myOS &
