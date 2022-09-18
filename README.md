@@ -68,3 +68,4 @@ but what about this empty bytes?
 they are for color information (background,text)
 the good thing is that on a computer startup these empty bytes are already set to white text on a black background
 so we dont have to set them ourselves
+we just have to make sure that we do not override that
