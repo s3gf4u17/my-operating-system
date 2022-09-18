@@ -6,6 +6,7 @@
 user@user: ~$ git init
 user@user: ~$ git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
 user@user: ~$ sudo apt-get install -y g++ binutils libc6-dev-i386
+user@user: ~$ sudo apt-get install -y virtualbox xorriso mtools
 ```
 <h2 align="left">concept</h2>
 what happens when u start your computer:
