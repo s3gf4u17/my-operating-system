@@ -76,3 +76,6 @@ no glib.c flag: -nostdlib
 other flags: -fno-builtin -fno-rtti -fno-exceptions -fno-leading-underscore
 linker cant find kernelMain function because gpp has different naming conventions so we need to add extern "C"
 all external function pointers are stored between start and end ctors so we need to call these constructors
+if we want to communicate with the hardware we need to be byte perfect
+we are using assembler file so we cant let cpp compile int as an 8bit type if for ex assembler uses 4bit int type
+so we need to create our own type
