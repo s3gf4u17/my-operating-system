@@ -56,9 +56,12 @@ because stack moves to the left
 when we push a few things there well create a lot of chaos
 so we need to put some empty space in between and have the kernel stack pointer behind it
 so well for ex use 2mb of space between
+
 stop is just an another safety infinite loop in case the one in kerbnel.cpp fails
+
 another problem is that the bootloader will not reckognize it as a kernel because bootloader will look for so called magic number in the file and if its not there then it will not believe that is is a kernel
 this magic number is a hex dec number 0x1badb002 we need some flags and a checksum as well
+
 before bootloader jumps into kernel it will store some information somewhere in ram (multiboot structure)
 containing info like size of ram and it store the pointer to that structure in a ax register
 it also copies the magic number into the bx register
