@@ -19,6 +19,7 @@ cpu registers in use:
 	<li>stack pointer</li>
 	<li>instruction pointer</li>
 </ul>
+
 timeline of boot:
 
 <ol>
@@ -38,6 +39,7 @@ timeline of boot:
 </ol>
 
 <h2 align="left">programming</h2>
+
 we have a big problem at the very beginning. the bootloader didnt set the stack pointer (but cpp programs expect it to be set before running). because of that we have to write two different files and connect them with a third one:
 
 <ul>
