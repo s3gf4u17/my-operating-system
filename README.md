@@ -11,6 +11,7 @@ user@user: ~$ mkdir system && cd system && git pull origin master
 user@user: ~$ make run
 ```
 <h2 align="left">theory</h2>
+
 cpu registers in use:
 <ul>
 	<li>ax</li>
@@ -19,6 +20,7 @@ cpu registers in use:
 	<li>instruction pointer</li>
 </ul>
 timeline of boot:
+
 <ol>
 	<li>motherboard takes data from bios and copies it to the ram</li>
 	<li>motherboard tells processor to place instruction pointer at the beginning of copied content</li>
@@ -37,6 +39,7 @@ timeline of boot:
 
 <h2 align="left">programming</h2>
 we have a big problem at the very beginning. the bootloader didnt set the stack pointer (but cpp programs expect it to be set before running). because of that we have to write two different files and connect them with a third one:
+
 <ul>
 	<li>loader.s (to set stack pointer) (compiled with gnu assembler into loader.o)</li>
 	<li>kernel.cpp (my os) (compiled creating kernel.o)</li>
