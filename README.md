@@ -48,11 +48,8 @@ we have a big problem at the very beginning. the bootloader didnt set the stack 
 	<li>linker.ld (combine two above into kernel.bin)</li>
 </ul>
 
-we dont want kernel to stop so we need to apply an infinite loop somewhere
-with extern we give assembler info that there will be a process kernelMain and that well want to jump into it
-it tells that if we want to call kernelMain just assume it will be there the linker will take care of it
-global loader - program entry point
-we need to mov stack pointer (esp) to some kernel stack pointer
+we dont want kernel to stop so we need to apply an infinite loop somewhere. with extern we give assembler info that there will be a process kernelMain and that well want to jump into it. it tells that if we want to call kernelMain just assume it will be there the linker will take care of it. global loader - program entry point, we need to mov stack pointer (esp) to some kernel stack pointer
+
 another problem
 if we want to set esp somewhere close to where kernelMain begins then it will override the stuff we have in ram
 because stack moves to the left
