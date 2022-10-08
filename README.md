@@ -10,14 +10,7 @@ user@user: ~$ sudo apt-get install -y virtualbox xorriso mtools
 user@user: ~$ mkdir system && cd system && git pull origin master
 user@user: ~$ make run
 ```
-<h2 align="left">concept</h2>
-components that turn on when you boot your computer:
-<ul>
-	<li>motherboard</li>
-	<li>harddrive</li>
-	<li>bios</li>
-	<li>cpu</li>
-</ul>
+<h2 align="left">theory</h2>
 cpu registers used:
 <ul>
 	<li>ax</li>
@@ -59,6 +52,8 @@ so at the start of the kernel we are in 32 bit mode so well make the os in 32 bi
 	<li></li>
 	<li></li>
 </ol>
+
+<h2 align="left">programming</h2>
 
 we dont want kernel to stop so we need to apply an infinite loop somewhere
 with extern we give assembler info that there will be a process kernelMain and that well want to jump into it
