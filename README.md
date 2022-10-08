@@ -9,17 +9,21 @@ user@user: ~$ sudo apt-get install -y g++ binutils libc6-dev-i386
 user@user: ~$ sudo apt-get install -y virtualbox xorriso mtools
 ```
 <h2 align="left">concept</h2>
-what happens when u start your computer:
+what components turn on when you boot your computer:
 <ul>
 	<li>motherboard</li>
+	<li>harddrive</li>
+	<li>bios</li>
+	<li>cpu</li>
 </ul>
--bios-cpu   harddrive attached to it
 
-cpu has several registers (we'll be using):
-ax
-bx
-stack pointer
-instruction pointer
+now cpu has several registers. we'll be using:
+<ul>
+	<li>ax</li>
+	<li>bx</li>
+	<li>stack pointer</li>
+	<li>instruction pointer</li>
+</ul>
 
 when u start your computer, motherboard takes data from bios and copies it to the ram
 it then tells processor to place instruction pointer at the beginning of copied content
