@@ -18,14 +18,21 @@ components that turn on when you boot your computer:
 	<li>bios</li>
 	<li>cpu</li>
 </ul>
-now cpu has several registers. we'll be using:
+cpu registers used:
 <ul>
 	<li>ax</li>
 	<li>bx</li>
 	<li>stack pointer</li>
 	<li>instruction pointer</li>
 </ul>
-
+timeline of os boot:
+<ol>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
 when u start your computer, motherboard takes data from bios and copies it to the ram
 it then tells processor to place instruction pointer at the beginning of copied content
 cpu will read and execute instructions (firmware)
