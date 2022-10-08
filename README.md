@@ -27,14 +27,13 @@ cpu registers used:
 </ul>
 timeline of os boot:
 <ol>
-	<li></li>
-	<li></li>
+	<li>motherboard takes data from bios and copies it to the ram</li>
+	<li>motherboard tells processor to place instruction pointer at the beginning of copied content</li>
 	<li></li>
 	<li></li>
 	<li></li>
 </ol>
-when u start your computer, motherboard takes data from bios and copies it to the ram
-it then tells processor to place instruction pointer at the beginning of copied content
+
 cpu will read and execute instructions (firmware)
 firmware will then tell cpu to check harddrive (it will check ~2mb of a harddrive(aka bootsector, master boot record))
 this will then be loaded into ram (bootloader like grub)
