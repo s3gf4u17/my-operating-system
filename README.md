@@ -32,29 +32,18 @@ timeline of os boot:
 	<li>the bootloader will print this list of systems</li>
 	<li>grub will know the place on thisk of the selected system (like /boot/kernel.bin)</li>
 	<li>it will copy this kernel to ram as well and tell the cpu to jump into the kernel location</li>
-	we have a big problem at this point
-	the bootloader will not set the stack pointer (but cpp programs expect it to be set before running)
-	so we have to write two different files: loader.s (to set stack pointer) and kernel.cpp (my os)
-	loader will be compiled with gnu assembler into loader.o
-kernel will be compiled creating kernel.o
-now we have two different files in two different programming languages so we have to connect them somehow
-we need to use linker.ld which will combine these two into kernel.bin (which well later put into boot directory with an entry in grub.cfg)
-even though the 64 bit system is a standard, when your computer starts the cpu will start in 32 bit compatibility mode
-so at the start of the kernel we are in 32 bit mode so well make the os in 32 bit mode
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
+	<li>your computer starts the cpu will start in 32 bit compatibility mode</li>
 </ol>
 
 <h2 align="left">programming</h2>
 
+we have a big problem at this point
+the bootloader will not set the stack pointer (but cpp programs expect it to be set before running)
+so we have to write two different files: loader.s (to set stack pointer) and kernel.cpp (my os)
+loader will be compiled with gnu assembler into loader.o
+kernel will be compiled creating kernel.o
+now we have two different files in two different programming languages so we have to connect them somehow
+we need to use linker.ld which will combine these two into kernel.bin (which well later put into boot directory with an entry in grub.cfg)
 we dont want kernel to stop so we need to apply an infinite loop somewhere
 with extern we give assembler info that there will be a process kernelMain and that well want to jump into it
 it tells that if we want to call kernelMain just assume it will be there the linker will take care of it
