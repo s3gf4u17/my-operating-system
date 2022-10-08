@@ -29,18 +29,22 @@ timeline of os boot:
 <ol>
 	<li>motherboard takes data from bios and copies it to the ram</li>
 	<li>motherboard tells processor to place instruction pointer at the beginning of copied content</li>
-	<li></li>
-	<li></li>
+	<li>cpu will read and execute instructions (firmware)</li>
+	<li>firmware will then tell cpu to check harddrive</li>
+	<li>cpu will check ~2mb of a harddrive(aka bootsector, master boot record)</li>
+	<li>this will then be loaded into ram (bootloader like grub)</li>
+	<li>then cpu's instruction pointer jumps into the beginning of bootloader</li>
+	<li>it will check partition /boot/grub/grub.cfg</li>
+	<li>it will read this file (with menu entries to select the system)</li>
+	<li>the bootloader will print this list of systems</li>
 	<li></li>
 </ol>
 
-cpu will read and execute instructions (firmware)
-firmware will then tell cpu to check harddrive (it will check ~2mb of a harddrive(aka bootsector, master boot record))
-this will then be loaded into ram (bootloader like grub)
-then cpu's instruction pointer jumps into the beginning of bootloader
-it will check partition /boot/grub/grub.cfg
-it will read this file (with menu entries to select the system)
-the bootloader will print this list of systems
+
+
+
+
+
 grub will know the place on thisk of the selected system (like /boot/kernel.bin)
 it will copy this kernel to ram as well and tell the cpu to jump into the kernel location
 we have a big problem at this point
