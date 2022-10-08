@@ -11,14 +11,14 @@ user@user: ~$ mkdir system && cd system && git pull origin master
 user@user: ~$ make run
 ```
 <h2 align="left">theory</h2>
-cpu registers used:
+cpu registers in use:
 <ul>
 	<li>ax</li>
 	<li>bx</li>
 	<li>stack pointer</li>
 	<li>instruction pointer</li>
 </ul>
-timeline of os boot:
+timeline of boot:
 <ol>
 	<li>motherboard takes data from bios and copies it to the ram</li>
 	<li>motherboard tells processor to place instruction pointer at the beginning of copied content</li>
