@@ -7,16 +7,17 @@ user@user: ~$ git init
 user@user: ~$ git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
 user@user: ~$ sudo apt-get install -y g++ binutils libc6-dev-i386
 user@user: ~$ sudo apt-get install -y virtualbox xorriso mtools
+user@user: ~$ mkdir system && cd system && git pull origin master
+user@user: ~$ make run
 ```
 <h2 align="left">concept</h2>
-what components turn on when you boot your computer:
+components that turn on when you boot your computer:
 <ul>
 	<li>motherboard</li>
 	<li>harddrive</li>
 	<li>bios</li>
 	<li>cpu</li>
 </ul>
-
 now cpu has several registers. we'll be using:
 <ul>
 	<li>ax</li>
