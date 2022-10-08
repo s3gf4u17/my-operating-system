@@ -10,7 +10,10 @@ user@user: ~$ sudo apt-get install -y virtualbox xorriso mtools
 ```
 <h2 align="left">concept</h2>
 what happens when u start your computer:
-motherboard-bios-cpu   harddrive attached to it
+<ul>
+	<li>motherboard</li>
+</ul>
+-bios-cpu   harddrive attached to it
 
 cpu has several registers (we'll be using):
 ax
